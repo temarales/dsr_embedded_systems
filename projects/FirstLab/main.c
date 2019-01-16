@@ -63,7 +63,7 @@ int main(void)
   InitButtons();
   
 
-  /* Turn all the leds off */
+  /* Turn all the leds off*/
   GPIO_SetBits(GPIOA, GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10);
   int flag = 1, lightNum = 0, i;
   int a, b; 
