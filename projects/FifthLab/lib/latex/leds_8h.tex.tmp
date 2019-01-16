@@ -1,0 +1,92 @@
+\hypertarget{leds_8h}{}\section{leds.\+h File Reference}
+\label{leds_8h}\index{leds.\+h@{leds.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx.\+h\char`\"{}}\newline
+Include dependency graph for leds.\+h\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{leds_8h_aff22d6bad6a70c6de1f6d4624a567b35}{Set\+Color} (double r, double g, double b)
+\begin{DoxyCompactList}\small\item\em Color setting(\+R\+G\+B). \end{DoxyCompactList}\item 
+void \hyperlink{leds_8h_a7524e5004875f66154fb2adc0dea841c}{Switch\+Color} (int num)
+\begin{DoxyCompactList}\small\item\em Switching defined colors. Switch color by number. \end{DoxyCompactList}\item 
+void \hyperlink{leds_8h_ac47107f6a1e332e294525db4c113720c}{Init\+T\+I\+M1} (int period, int prescaler)
+\begin{DoxyCompactList}\small\item\em Initializing T\+I\+M1. Initializing T\+I\+M1. \end{DoxyCompactList}\item 
+void \hyperlink{leds_8h_a4b2477626756bd16fd3dac24b0297493}{Init\+P\+W\+Mwith\+T\+I\+M1} (int pulse)
+\begin{DoxyCompactList}\small\item\em Initializing T\+I\+M1 for P\+WM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{leds_8h_a2891f5218a5de51135369f9f1adf64ac}\label{leds_8h_a2891f5218a5de51135369f9f1adf64ac}} 
+void \hyperlink{leds_8h_a2891f5218a5de51135369f9f1adf64ac}{Init\+Leds\+AF} (void)
+\begin{DoxyCompactList}\small\item\em Initializing leds 8-\/10. Initializing leds 8-\/10, mode -\/ alternative function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Library for working with colors on stm32. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{leds_8h_a4b2477626756bd16fd3dac24b0297493}\label{leds_8h_a4b2477626756bd16fd3dac24b0297493}} 
+\index{leds.\+h@{leds.\+h}!Init\+P\+W\+Mwith\+T\+I\+M1@{Init\+P\+W\+Mwith\+T\+I\+M1}}
+\index{Init\+P\+W\+Mwith\+T\+I\+M1@{Init\+P\+W\+Mwith\+T\+I\+M1}!leds.\+h@{leds.\+h}}
+\subsubsection{\texorpdfstring{Init\+P\+W\+Mwith\+T\+I\+M1()}{InitPWMwithTIM1()}}
+{\footnotesize\ttfamily void Init\+P\+W\+Mwith\+T\+I\+M1 (\begin{DoxyParamCaption}\item[{int}]{pulse }\end{DoxyParamCaption})}
+
+
+
+Initializing T\+I\+M1 for P\+WM. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pulse} & Pulse of P\+WM \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{leds_8h_ac47107f6a1e332e294525db4c113720c}\label{leds_8h_ac47107f6a1e332e294525db4c113720c}} 
+\index{leds.\+h@{leds.\+h}!Init\+T\+I\+M1@{Init\+T\+I\+M1}}
+\index{Init\+T\+I\+M1@{Init\+T\+I\+M1}!leds.\+h@{leds.\+h}}
+\subsubsection{\texorpdfstring{Init\+T\+I\+M1()}{InitTIM1()}}
+{\footnotesize\ttfamily void Init\+T\+I\+M1 (\begin{DoxyParamCaption}\item[{int}]{period,  }\item[{int}]{prescaler }\end{DoxyParamCaption})}
+
+
+
+Initializing T\+I\+M1. Initializing T\+I\+M1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em period} & Timer\textquotesingle{}s period \\
+\hline
+\mbox{\tt in}  & {\em prescaler} & Timer\textquotesingle{}s prescaler \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{leds_8h_aff22d6bad6a70c6de1f6d4624a567b35}\label{leds_8h_aff22d6bad6a70c6de1f6d4624a567b35}} 
+\index{leds.\+h@{leds.\+h}!Set\+Color@{Set\+Color}}
+\index{Set\+Color@{Set\+Color}!leds.\+h@{leds.\+h}}
+\subsubsection{\texorpdfstring{Set\+Color()}{SetColor()}}
+{\footnotesize\ttfamily void Set\+Color (\begin{DoxyParamCaption}\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b }\end{DoxyParamCaption})}
+
+
+
+Color setting(\+R\+G\+B). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em r} & Brightness of red\+: 0..255 \\
+\hline
+\mbox{\tt in}  & {\em g} & Brightness of green\+: 0..255 \\
+\hline
+\mbox{\tt in}  & {\em b} & Brightness of blue\+: 0..255 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{leds_8h_a7524e5004875f66154fb2adc0dea841c}\label{leds_8h_a7524e5004875f66154fb2adc0dea841c}} 
+\index{leds.\+h@{leds.\+h}!Switch\+Color@{Switch\+Color}}
+\index{Switch\+Color@{Switch\+Color}!leds.\+h@{leds.\+h}}
+\subsubsection{\texorpdfstring{Switch\+Color()}{SwitchColor()}}
+{\footnotesize\ttfamily void Switch\+Color (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Switching defined colors. Switch color by number. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em num} & Color number in defined colors \\
+\hline
+\end{DoxyParams}
