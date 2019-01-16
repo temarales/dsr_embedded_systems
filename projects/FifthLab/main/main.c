@@ -1,5 +1,4 @@
 #include "main.h"
-#include "lib/library.h"
 
 static int numColor = 0;
 

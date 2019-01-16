@@ -1,11 +1,11 @@
 BUILD_ROOT = ../../..
 
-OBJS = library.o
-DEPS = library.d
+OBJS = leds.o
+DEPS = leds.d
 
 include $(BUILD_ROOT)/common_defs.mk
 
-LIB = library.a
+LIB = leds.a
 
 
 all: $(LIB)

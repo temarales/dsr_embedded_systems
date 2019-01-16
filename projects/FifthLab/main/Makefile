@@ -6,7 +6,7 @@ LED_DIR = ../lib
 
 LIB_DIRS += $(LED_DIR)
 INCLUDE_DIRS += -I$(LED_DIR)
-LDLIBS += -llibrary
+LDLIBS += -lleds
 
 BINARY_NAME = main
 
