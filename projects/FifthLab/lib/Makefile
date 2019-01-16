@@ -5,7 +5,7 @@ DEPS = leds.d
 
 include $(BUILD_ROOT)/common_defs.mk
 
-LIB = leds.a
+LIB = libleds.a
 
 
 all: $(LIB)

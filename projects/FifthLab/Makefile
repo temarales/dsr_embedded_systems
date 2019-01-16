@@ -1,7 +1,7 @@
 all: clean library main
 
-flash_main: main
-	@$(MAKE) -C example flash
+flash: main
+	@$(MAKE) -C main flash
 
 library:
 	@$(MAKE) -C lib all
