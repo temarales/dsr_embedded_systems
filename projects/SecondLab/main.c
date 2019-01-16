@@ -4,9 +4,9 @@
 
 int pulse = 15000;
 
-void InitButtons(void )
+static void InitButtons(void )
 {
-  GPIO_InitTypeDef GPIO_InitStructureButton;
+  GPIO_InitTypeDef GPIO_InitStructureButton = {0};
   GPIO_InitStructureButton.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1;
   GPIO_InitStructureButton.GPIO_Speed = GPIO_Speed_2MHz;
   GPIO_InitStructureButton.GPIO_Mode  = GPIO_Mode_IN;
@@ -14,9 +14,9 @@ void InitButtons(void )
   GPIO_Init(GPIOE, &GPIO_InitStructureButton);
 }
 
-void InitLedsOnSmall(void )
+static void InitLedsOnSmall(void )
 {
-  GPIO_InitTypeDef GPIO_InitStructure;
+  GPIO_InitTypeDef GPIO_InitStructure = {0};
   GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10;
   GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_OUT;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
@@ -25,10 +25,18 @@ void InitLedsOnSmall(void )
   GPIO_Init(GPIOA, &GPIO_InitStructure);
 }
 
-void SwitchLight(int num)
+static void InitTIM2(int period, int prescaler)
 {
- 
- 
+  TIM_TimeBaseInitTypeDef tim_struct = {0};
+  tim_struct.TIM_Period = period - 1;
+  tim_struct.TIM_Prescaler = prescaler - 1;
+  tim_struct.TIM_ClockDivision = 0;
+  tim_struct.TIM_CounterMode = TIM_CounterMode_Up;
+  TIM_TimeBaseInit(TIM2, &tim_struct);
+}
+
+static void SwitchLight(int num)
+{
    switch (num) {
    case 0:
        {
@@ -48,30 +56,19 @@ void SwitchLight(int num)
     default:
         break;
         }
-  
 }
 
 int main(void)
 {
-  GPIO_InitTypeDef GPIO_InitStructure;
-  TIM_TimeBaseInitTypeDef tim_struct;
-  NVIC_InitTypeDef nvic_struct;
 
   /* Enable peripheral clock for LEDs and button port */
   RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
   RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2 , ENABLE);
 
-  SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE,EXTI_PinSource0);
-  SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE,EXTI_PinSource1);
-
 
   /*Init timer*/
-  tim_struct.TIM_Period = 2000 - 1;
-  tim_struct.TIM_Prescaler = 42000 - 1;
-  tim_struct.TIM_ClockDivision = 0;
-  tim_struct.TIM_CounterMode = TIM_CounterMode_Up;
-  TIM_TimeBaseInit(TIM2, &tim_struct);
+  InitTIM2(2000, 42000);
   TIM_Cmd(TIM2, ENABLE);
 
   /* Init LEDs */
@@ -85,7 +82,7 @@ int main(void)
   GPIO_ResetBits(GPIOA, GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10);
 
 
-  int flag = 1, lightNum = 0, i, isOn = 0 ;
+  int flag = 1, lightNum = 0, isOn = 0 ;
   int a, b; 
 
   while (1)
