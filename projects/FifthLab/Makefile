@@ -3,12 +3,12 @@ all: clean library main
 flash_main: main
 	@$(MAKE) -C example flash
 
-example: library
-	@$(MAKE) -C main all
-
 library:
-	@$(MAKE) -C library all
+	@$(MAKE) -C lib all
+
+main: library
+	@$(MAKE) -C main all
 
 clean:
 	@$(MAKE) -C main clean
-	@$(MAKE) -C library clean
+	@$(MAKE) -C lib clean
