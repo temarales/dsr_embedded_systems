@@ -1,0 +1,575 @@
+token: --nNode=3
+token: --pipeName=/tmp/zt
+start simulate
+have smth from node 0
+Read from pipe: rpipe 3 ret 11
+dump of buf [11] buf parse
+0b 03 08 39 ff ff ff ff 07 9b cb 
+mf.frame_control.dest_addr_mode 2  all 2051
+frame 3 0 0 0 0 0 2 0 0
+addr 65535 65535 39687 57291
+nNode 65535
+write pipe /tmp/zt1.write open failed No such device or address
+Write to pipe: pipe 1 ret -1
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 11
+dump of buf [11] buf parse
+0b 03 08 3a ff ff ff ff 07 e6 c7 
+mf.frame_control.dest_addr_mode 2  all 2051
+frame 3 0 0 0 0 0 2 0 0
+addr 65535 65535 58887 57287
+nNode 65535
+write pipe /tmp/zt1.write open failed No such device or address
+Write to pipe: pipe 1 ret -1
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 11
+dump of buf [11] buf parse
+0b 03 08 59 ff ff ff ff 07 2a 4c 
+mf.frame_control.dest_addr_mode 2  all 2051
+frame 3 0 0 0 0 0 2 0 0
+addr 65535 65535 10759 57164
+nNode 65535
+Write to pipe: pipe 0 ret 11
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 29
+dump of buf [29] buf parse
+1d 00 80 39 39 fe 00 00 ff cf 00 00 00 21 84 00 
+00 00 00 08 07 06 05 ff ff ff 00 61 f1 
+mf.frame_control.dest_addr_mode 0  all 32768
+frame 0 0 0 0 0 0 0 0 2
+addr 65081 0 53247 0
+nNode 65535
+write pipe /tmp/zt1.write open failed No such device or address
+Write to pipe: pipe 1 ret -1
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 11
+dump of buf [11] buf parse
+0b 03 08 5a ff ff ff ff 07 57 40 
+mf.frame_control.dest_addr_mode 2  all 2051
+frame 3 0 0 0 0 0 2 0 0
+addr 65535 65535 22279 57152
+nNode 65535
+Write to pipe: pipe 0 ret 11
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 29
+dump of buf [29] buf parse
+1d 00 80 3a 39 fe 00 00 ff cf 00 00 00 21 84 00 
+00 00 00 08 07 06 05 ff ff ff 00 ad 1c 
+mf.frame_control.dest_addr_mode 0  all 32768
+frame 0 0 0 0 0 0 0 0 2
+addr 65081 0 53247 0
+nNode 65535
+Write to pipe: pipe 1 ret 29
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 22
+dump of buf [22] buf parse
+16 23 c8 5b 39 fe 00 00 ff ff 01 01 01 01 01 01 
+01 01 01 8e 94 24 
+mf.frame_control.dest_addr_mode 2  all 51235
+frame 3 0 0 1 0 0 2 0 3
+addr 65081 0 65535 257
+nNode 0
+Write to pipe: pipe 0 ret 22
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 02 00 5b ee 59 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 23022 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 19
+dump of buf [19] buf parse
+13 63 c8 5c 39 fe 00 00 01 01 01 01 01 01 01 01 
+04 ca 73 
+mf.frame_control.dest_addr_mode 2  all 51299
+frame 3 0 0 1 1 0 2 0 3
+addr 65081 0 257 257
+nNode 0
+Write to pipe: pipe 0 ret 19
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 12 00 5c c4 a8 
+mf.frame_control.dest_addr_mode 0  all 18
+frame 2 0 1 0 0 0 0 0 0
+addr 43204 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 30
+dump of buf [30] buf parse
+1e 63 cc 3b 39 fe 01 01 01 01 01 01 01 01 00 00 
+00 00 08 07 06 05 02 01 00 00 f5 47 00 00 
+mf.frame_control.dest_addr_mode 3  all 52323
+frame 3 0 0 1 1 0 3 0 3
+addr 65081 257 257 257
+nNode 1
+Got associate response laddr 1 1 nwk addr 1 
+AddrUpdate 1 <--> 1
+Write to pipe: pipe 1 ret 30
+have smth from node 1
+Read from pipe: rpipe 4 ret 6
+dump of buf [6] buf parse
+06 02 00 3b e8 3a 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 15080 0 63264 57196
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 40
+dump of buf [40] buf parse
+28 41 88 5d 39 fe ff ff 01 00 48 00 fd ff 01 00 
+0a 00 08 00 13 00 00 00 00 59 01 01 00 01 01 01 
+01 01 01 01 01 0e 44 5a 
+mf.frame_control.dest_addr_mode 2  all 34881
+frame 1 0 0 0 1 0 2 0 2
+addr 65081 65535 1 72
+nNode 65535
+Got associate response laddr 1 nwk addr 1
+AddrUpdate 1 <--> 1
+Write to pipe: pipe 0 ret 40
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 40
+dump of buf [40] buf parse
+28 41 88 3c 39 fe ff ff 00 00 48 00 fd ff 01 00 
+09 00 08 00 13 00 00 00 00 59 01 01 00 01 01 01 
+01 01 01 01 01 0e 3a 7d 
+mf.frame_control.dest_addr_mode 2  all 34881
+frame 1 0 0 0 1 0 2 0 2
+addr 65081 65535 0 72
+nNode 65535
+Got associate response laddr 1 nwk addr 1
+AddrUpdate 1 <--> 1
+Write to pipe: pipe 1 ret 40
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 33
+dump of buf [33] buf parse
+21 61 88 5e 39 fe 00 00 01 00 48 00 00 00 01 00 
+0a 01 40 00 01 00 00 00 00 5a 02 00 00 00 00 b3 
+4d 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 0 1 72
+nNode 0
+Write to pipe: pipe 0 ret 33
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 02 00 5e 43 0e 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 3651 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 28
+dump of buf [28] buf parse
+1c 61 88 3d 39 fe 01 00 00 00 48 00 01 00 00 00 
+05 00 02 00 01 00 00 00 00 5a 81 c1 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 1 0 72
+nNode 1
+Write to pipe: pipe 1 ret 28
+have smth from node 1
+Read from pipe: rpipe 4 ret 6
+dump of buf [6] buf parse
+06 02 00 3d de 5f 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 24542 0 63264 57196
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 40
+dump of buf [40] buf parse
+28 61 88 3e 39 fe 01 00 00 00 48 00 01 00 00 00 
+0a 01 40 00 01 80 00 00 00 39 02 00 00 00 00 00 
+08 07 06 05 00 00 5d 0b 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 1 0 72
+nNode 1
+Write to pipe: pipe 1 ret 40
+have smth from node 1
+Read from pipe: rpipe 4 ret 6
+dump of buf [6] buf parse
+06 02 00 3e 45 6d 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 27973 0 63264 57196
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 28
+dump of buf [28] buf parse
+1c 61 88 5f 39 fe 00 00 01 00 48 00 00 00 01 00 
+05 02 02 00 01 80 00 00 00 39 4c 9e 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 0 1 72
+nNode 0
+Write to pipe: pipe 0 ret 28
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 02 00 5f ca 1f 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 8138 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 31
+dump of buf [31] buf parse
+1f 61 88 60 39 fe 00 00 01 00 48 00 00 00 01 00 
+0a 03 40 00 05 00 00 00 00 5b 03 00 00 01 b3 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 0 1 72
+nNode 0
+Write to pipe: pipe 0 ret 31
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 02 00 60 be d6 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 54974 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 28
+dump of buf [28] buf parse
+1c 61 88 3f 39 fe 01 00 00 00 48 00 01 00 00 00 
+05 02 02 00 05 00 00 00 00 5b dd 40 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 1 0 72
+nNode 1
+Write to pipe: pipe 1 ret 28
+have smth from node 1
+Read from pipe: rpipe 4 ret 6
+dump of buf [6] buf parse
+06 02 00 3f cc 7c 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 31948 0 63264 57196
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 34
+dump of buf [34] buf parse
+22 61 88 40 39 fe 01 00 00 00 48 00 01 00 00 00 
+0a 03 40 00 05 80 00 00 00 3a 03 00 00 00 01 0b 
+f0 2a 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 1 0 72
+nNode 1
+Write to pipe: pipe 1 ret 34
+have smth from node 1
+Read from pipe: rpipe 4 ret 34
+dump of buf [6] buf parse
+06 02 00 40 bc f7 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 63420 24860 24968 65081
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+dump of buf [28] buf parse
+1c 61 88 61 39 fe 00 00 01 00 48 00 00 00 01 00 
+05 04 02 00 05 80 00 00 00 3a d4 36 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 0 1 72
+nNode 0
+Write to pipe: pipe 0 ret 28
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 02 00 61 37 c7 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 50999 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 32
+dump of buf [32] buf parse
+20 61 88 62 39 fe 00 00 01 00 48 00 00 00 01 00 
+0a 05 40 00 04 00 00 00 00 5c 04 00 00 0b 4d 5d 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 0 1 72
+nNode 0
+Write to pipe: pipe 0 ret 32
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 02 00 62 ac f5 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 62892 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 28
+dump of buf [28] buf parse
+1c 61 88 41 39 fe 01 00 00 00 48 00 01 00 00 00 
+05 04 02 00 04 00 00 00 00 5c b5 d2 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 1 0 72
+nNode 1
+Write to pipe: pipe 1 ret 28
+have smth from node 1
+Read from pipe: rpipe 4 ret 6
+dump of buf [6] buf parse
+06 02 00 41 35 e6 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 58933 0 63264 57196
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 51
+dump of buf [51] buf parse
+33 61 88 42 39 fe 01 00 00 00 48 00 01 00 00 00 
+0a 05 40 00 04 80 00 00 00 3b 04 00 00 00 12 0b 
+02 00 0a 00 04 01 aa aa 04 d0 07 d1 07 d2 07 d3 
+07 80 83 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 1 0 72
+nNode 1
+Write to pipe: pipe 1 ret 51
+have smth from node 1
+Read from pipe: rpipe 4 ret 6
+dump of buf [6] buf parse
+06 02 00 42 ae d4 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 54446 0 63264 57196
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 28
+dump of buf [28] buf parse
+1c 61 88 63 39 fe 00 00 01 00 48 00 00 00 01 00 
+05 06 02 00 04 80 00 00 00 3b 0f a3 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 0 1 72
+nNode 0
+Write to pipe: pipe 0 ret 28
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 02 00 63 25 e4 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 58405 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 31
+dump of buf [31] buf parse
+1f 61 88 64 39 fe 00 00 01 00 48 00 00 00 01 00 
+0a 07 40 00 03 00 00 00 00 5d 05 00 00 58 a2 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 0 1 72
+nNode 0
+Write to pipe: pipe 0 ret 31
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 02 00 64 9a 90 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 37018 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 28
+dump of buf [28] buf parse
+1c 61 88 43 39 fe 01 00 00 00 48 00 01 00 00 00 
+05 06 02 00 03 00 00 00 00 5d 94 5f 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 1 0 72
+nNode 1
+Write to pipe: pipe 1 ret 28
+have smth from node 1
+Read from pipe: rpipe 4 ret 6
+dump of buf [6] buf parse
+06 02 00 43 27 c5 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 50471 0 63264 57196
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 34
+dump of buf [34] buf parse
+22 61 88 44 39 fe 01 00 00 00 48 00 01 00 00 00 
+0a 07 40 00 03 80 00 00 00 3c 05 00 00 00 50 44 
+98 c9 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 1 0 72
+nNode 1
+Write to pipe: pipe 1 ret 34
+have smth from node 1
+Read from pipe: rpipe 4 ret 6
+dump of buf [6] buf parse
+06 02 00 44 98 b1 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 45464 0 63264 57196
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 28
+dump of buf [28] buf parse
+1c 61 88 65 39 fe 00 00 01 00 48 00 00 00 01 00 
+05 08 02 00 03 80 00 00 00 3c 31 3c 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 0 1 72
+nNode 0
+Write to pipe: pipe 0 ret 28
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 02 00 65 13 81 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 33043 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 1
+Read from pipe: rpipe 4 ret 28
+dump of buf [28] buf parse
+1c 61 88 66 39 fe 00 00 01 00 48 00 00 00 01 00 
+05 09 40 0b aa aa 02 00 0b 5e d8 ef 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 0 1 72
+nNode 0
+Write to pipe: pipe 0 ret 28
+have smth from node 0
+Read from pipe: rpipe 3 ret 6
+dump of buf [6] buf parse
+06 02 00 66 88 b3 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 45960 0 63264 57196
+nNode 65535
+Write to pipe: pipe 1 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 28
+dump of buf [28] buf parse
+1c 61 88 45 39 fe 01 00 00 00 48 00 01 00 00 00 
+05 08 02 0b aa aa 02 00 0b 5e de 32 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 1 0 72
+nNode 1
+Write to pipe: pipe 1 ret 28
+have smth from node 1
+Read from pipe: rpipe 4 ret 6
+dump of buf [6] buf parse
+06 02 00 45 11 a0 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 40977 0 63264 57196
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
+have smth from node 0
+Read from pipe: rpipe 3 ret 75
+dump of buf [75] buf parse
+4b 61 88 46 39 fe 01 00 00 00 48 00 01 00 00 00 
+01 09 00 0b aa aa 02 00 0b 3d 47 6f 6f 64 20 6a 
+6f 62 21 20 59 6f 75 20 61 72 65 20 70 72 6f 6d 
+6f 74 65 64 20 74 6f 20 61 20 5a 69 67 42 65 65 
+20 65 78 70 65 72 74 21 00 95 06 
+mf.frame_control.dest_addr_mode 2  all 34913
+frame 1 0 0 1 1 0 2 0 2
+addr 65081 1 0 72
+nNode 1
+Write to pipe: pipe 1 ret 75
+have smth from node 1
+Read from pipe: rpipe 4 ret 6
+dump of buf [6] buf parse
+06 02 00 46 8a 92 
+mf.frame_control.dest_addr_mode 0  all 2
+frame 2 0 0 0 0 0 0 0 0
+addr 37514 0 63264 57196
+nNode 65535
+Write to pipe: pipe 0 ret 6
+write pipe /tmp/zt2.write open failed No such device or address
+Write to pipe: pipe 2 ret -1
