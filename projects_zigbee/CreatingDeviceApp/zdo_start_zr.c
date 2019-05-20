@@ -61,8 +61,8 @@ PURPOSE: Test for ZC application written using ZDO.
 /*! \addtogroup ZB_TESTS */
 /*! @{ */
 
-zb_uint8_t button0 = 0;
-zb_uint8_t button1 = 0;
+static volatile zb_uint8_t button0 = 0;
+static volatile zb_uint8_t button1 = 0;
 static void init_all(void);
 static void send_toggle_command(zb_uint8_t param);
 static void change_color_command(zb_uint8_t param);
@@ -70,8 +70,8 @@ static void increase_brightness_command(zb_uint8_t param);
 
 static void init_all(void)
 {
-   init_buttons();
-   init_buttons_interractions();
+	init_buttons();
+	init_buttons_interractions();
 }
 
 
@@ -169,56 +169,55 @@ zb_ieee_addr_t g_zr_addr = {0x01, 0xbb, 0xbb, 0xbb, 0xbb, 0xbb, 0xbb, 0xbb};
 
 MAIN()
 {
-  ARGV_UNUSED;
-  init_all();
+	ARGV_UNUSED;
+	init_all();
 #if !(defined KEIL || defined SDCC|| defined ZB_IAR)
-  if ( argc < 3 )
-  {
-    //printf("%s <read pipe path> <write pipe path>\n", argv[0]);
-    return 0;
-  }
+	if ( argc < 3 )
+	{
+		//printf("%s <read pipe path> <write pipe path>\n", argv[0]);
+		return 0;
+	}
 #endif
 
   /* Init device, load IB values from nvram or set it to default */
 #ifndef ZB8051
-  ZB_INIT("zdo_zr", argv[1], argv[2]);
+	ZB_INIT("zdo_zr", argv[1], argv[2]);
 #else
-  ZB_INIT("zdo_zr", "2", "2");
+	ZB_INIT("zdo_zr", "2", "2");
 #endif
 #ifdef ZB_SECURITY
-  ZG->nwk.nib.security_level = 0;
+	ZG->nwk.nib.security_level = 0;
 #endif
 
-  ZB_AIB().aps_channel_mask = (1l << 13); 
-  ZB_IEEE_ADDR_COPY(ZB_PIB_EXTENDED_ADDRESS(), &g_zr_addr); 
+	ZB_AIB().aps_channel_mask = (1l << 13); 
+	ZB_IEEE_ADDR_COPY(ZB_PIB_EXTENDED_ADDRESS(), &g_zr_addr); 
 
-  if (zdo_dev_start() != RET_OK)
-  {
-    TRACE_MSG(TRACE_ERROR, "zdo_dev_start failed", (FMT__0));
-  }
-  else
-  {
-    zdo_main_loop();
-  }
+	if (zdo_dev_start() != RET_OK)
+	{
+		TRACE_MSG(TRACE_ERROR, "zdo_dev_start failed", (FMT__0));
+	}
+	else
+	{
+		zdo_main_loop();
+	}
 
-  TRACE_DEINIT();
-
-  MAIN_RETURN(0);
+	TRACE_DEINIT();
+	MAIN_RETURN(0);
 }
 
 
 void zb_zdo_startup_complete(zb_uint8_t param) ZB_CALLBACK
 {
-  zb_buf_t *buf = ZB_BUF_FROM_REF(param);
-  if (buf->u.hdr.status == 0)
-  {
-    TRACE_MSG(TRACE_APS1, "Device STARTED OK", (FMT__0));
-  }
-  else
-  {
-    TRACE_MSG(TRACE_ERROR, "Device started FAILED status %d", (FMT__D, (int)buf->u.hdr.status));
-    zb_free_buf(buf);
-  }
+	zb_buf_t *buf = ZB_BUF_FROM_REF(param);
+	if (buf->u.hdr.status == 0)
+	{
+		TRACE_MSG(TRACE_APS1, "Device STARTED OK", (FMT__0));
+	}
+	else
+	{
+		TRACE_MSG(TRACE_ERROR, "Device started FAILED status %d", (FMT__D, (int)buf->u.hdr.status));
+		zb_free_buf(buf);
+	}
 }
 
 

@@ -11,18 +11,18 @@
 #include "zb_secur_api.h"
 
 typedef struct simple_command_package{
- zb_int8_t command_code;
+	zb_int8_t command_code;
 } simple_cp;
 
 typedef struct info_from_user {
- zb_int8_t device_address;
+	zb_int8_t device_address;
 } simple_user_info;
 
 
 enum commands {
- SWITCH_MODE,
- CHANGE_BRIGHTNESS_FOR_STEP_UP,
- SWITCH_COLOR,
+	SWITCH_MODE,
+	CHANGE_BRIGHTNESS_FOR_STEP_UP,
+	SWITCH_COLOR,
 };
 
 

@@ -1,0 +1,87 @@
+\hypertarget{leds_8h}{}\section{leds.\+h File Reference}
+\label{leds_8h}\index{leds.\+h@{leds.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+rcc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+tim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+exti.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+syscfg.\+h\char`\"{}}\newline
+Include dependency graph for leds.\+h\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{leds_8h_ad45ca71eb4a535f4cfaf270ff24f6127}{set\+\_\+color} (double r, double g, double b)
+\begin{DoxyCompactList}\small\item\em Color setting(\+R\+G\+B). \end{DoxyCompactList}\item 
+void \hyperlink{leds_8h_a40cc792f9f530a350eaa7d65c01f7313}{switch\+\_\+color} (int num)
+\begin{DoxyCompactList}\small\item\em Switch color to one of a limited set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{leds_8h_a2c33fc67157fe33c5aeff9418cf2dad0}\label{leds_8h_a2c33fc67157fe33c5aeff9418cf2dad0}} 
+void \hyperlink{leds_8h_a2c33fc67157fe33c5aeff9418cf2dad0}{start\+\_\+\+T\+I\+M1} (void)
+\begin{DoxyCompactList}\small\item\em Start T\+I\+M1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{leds_8h_a2a02c272573260e6d6d90e917d87d278}\label{leds_8h_a2a02c272573260e6d6d90e917d87d278}} 
+void \hyperlink{leds_8h_a2a02c272573260e6d6d90e917d87d278}{init\+\_\+buttons\+\_\+interractions} (void)
+\begin{DoxyCompactList}\small\item\em Initialize interractions for buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{leds_8h_afe0b498404852847e48c5539c4d651e8}\label{leds_8h_afe0b498404852847e48c5539c4d651e8}} 
+void \hyperlink{leds_8h_afe0b498404852847e48c5539c4d651e8}{init\+\_\+buttons} (void)
+\begin{DoxyCompactList}\small\item\em Initialize buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{leds_8h_a609da002c7d28bbee7de42e8d6da0708}\label{leds_8h_a609da002c7d28bbee7de42e8d6da0708}} 
+void \hyperlink{leds_8h_a609da002c7d28bbee7de42e8d6da0708}{init\+\_\+leds\+\_\+\+A\+F\+\_\+\+T\+I\+M1} (void)
+\begin{DoxyCompactList}\small\item\em Initialize leds with alternative function. \end{DoxyCompactList}\item 
+void \hyperlink{leds_8h_a0e28d2ccae3d5b2c3ba2c85349b29848}{set\+\_\+brightness} (double level)
+\begin{DoxyCompactList}\small\item\em Set brigthness to level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Library for working with stm32. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{leds_8h_a0e28d2ccae3d5b2c3ba2c85349b29848}\label{leds_8h_a0e28d2ccae3d5b2c3ba2c85349b29848}} 
+\index{leds.\+h@{leds.\+h}!set\+\_\+brightness@{set\+\_\+brightness}}
+\index{set\+\_\+brightness@{set\+\_\+brightness}!leds.\+h@{leds.\+h}}
+\subsubsection{\texorpdfstring{set\+\_\+brightness()}{set\_brightness()}}
+{\footnotesize\ttfamily void set\+\_\+brightness (\begin{DoxyParamCaption}\item[{double}]{level }\end{DoxyParamCaption})}
+
+
+
+Set brigthness to level. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em level} & Level of brightness from 0 to 1. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{leds_8h_ad45ca71eb4a535f4cfaf270ff24f6127}\label{leds_8h_ad45ca71eb4a535f4cfaf270ff24f6127}} 
+\index{leds.\+h@{leds.\+h}!set\+\_\+color@{set\+\_\+color}}
+\index{set\+\_\+color@{set\+\_\+color}!leds.\+h@{leds.\+h}}
+\subsubsection{\texorpdfstring{set\+\_\+color()}{set\_color()}}
+{\footnotesize\ttfamily void set\+\_\+color (\begin{DoxyParamCaption}\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b }\end{DoxyParamCaption})}
+
+
+
+Color setting(\+R\+G\+B). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em r} & Brightness of red\+: 0..255 \\
+\hline
+\mbox{\tt in}  & {\em g} & Brightness of green\+: 0..255 \\
+\hline
+\mbox{\tt in}  & {\em b} & Brightness of blue\+: 0..255 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{leds_8h_a40cc792f9f530a350eaa7d65c01f7313}\label{leds_8h_a40cc792f9f530a350eaa7d65c01f7313}} 
+\index{leds.\+h@{leds.\+h}!switch\+\_\+color@{switch\+\_\+color}}
+\index{switch\+\_\+color@{switch\+\_\+color}!leds.\+h@{leds.\+h}}
+\subsubsection{\texorpdfstring{switch\+\_\+color()}{switch\_color()}}
+{\footnotesize\ttfamily void switch\+\_\+color (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Switch color to one of a limited set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em num} & Color number in set \\
+\hline
+\end{DoxyParams}
